@@ -11,5 +11,5 @@ Ideas are based on the books:
 * A soundfont, e.g. papelmedia_Irina_Brochin.sf2
 
 * Python modules
-- music21
-- midi2audio
+    - music21
+    - midi2audio
