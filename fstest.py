@@ -1,10 +1,13 @@
 import time
 import fluidsynth
 import pdb
+from playsound import playsound
 # from midi2audio import FluidSynth
 
 # note: at the moment, this only works with fluidsynth 1.1.11
 # newer versions do not work with pyfluidsynth
+
+playsound('click_60bpm.mp3', block=False)
 
 fs = fluidsynth.Synth()
 # fs.start()
@@ -13,6 +16,11 @@ fs.start(driver='coreaudio')
 sfid = fs.sfload("../soundfonts/Papelmedia_Irina_Brochin.sf2")
 fs.program_select(0, sfid, 0, 0)
 
+for i in range(10):
+    fs.noteon(0, 90, 127)
+    time.sleep(0.0001)
+    fs.noteoff(0,90)
+    time.sleep(0.9)
 
 # pdb.set_trace()
 
