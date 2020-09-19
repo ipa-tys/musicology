@@ -54,3 +54,5 @@ fs.midi_to_audio(cadence_midi, 'canon1.wav')
 # todo: command line parser, e.g. with option for tempo, ornamentation etc.
 # other canons, e.g. in upper octave, fifth, fourth, ...
 # antecedent for canon around a cantus firmus
+# try aubio for pitch detection
+
