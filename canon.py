@@ -9,6 +9,8 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='generate canon antecedents.')
     parser.add_argument('-o','--output',help='File stem for output files',required=True)
     parser.add_argument('-t','--type', help='Type of canon', required=True)
+    # todo: add difficulty levels (e.g. only a subset of steps, etc)
+    # let choose the soundfont
     args = parser.parse_args()
     filestem = args.output
     canon_type = args.type
