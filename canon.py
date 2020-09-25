@@ -25,9 +25,11 @@ if __name__ == '__main__':
 
 
     if canon_type == 'l8':   
-        intervalNames = ['m-3','M-3','P-4','m3','M3','P5']
+        intervalNames = ['m-3','M-3','P-4','P1','m3','M3','P5']
     if canon_type == 'l5':
-        intervalNames = ['m-3','M-3','P-5','m2','M2','P4']
+        intervalNames = ['m-3','M-3','P-5','P1','m2','M2','P4']
+    if canon_type == 'l4':
+        intervalNames = ['m2','M2','P4','m6','m-2','M-2','m-3','M-3','P5']
     intervals = []
     for intervalName in intervalNames:
         intervals.append(interval.Interval(intervalName))
