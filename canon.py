@@ -16,7 +16,7 @@ if __name__ == '__main__':
     canon_type = args.type
 
     legalNoteNamesTenor = ['B-2','B2','C3','D3','E3','F3','G3','A3','B-3','B3','C4','D4','E4','F4','G4','A4']
-    legalNoteNamesSoprano = ['B-3','B3','C4','D4','E4','F4','G4','A4','B-4','B4','C5','D5','E5','F5','G5','A5']
+    legalNoteNamesSoprano = ['B-3','B3','C4','D4','E4','F4','G4','A4','B-4','B4','C5','D5'] # 'E5','F5','G5','A5']
     legalNotes = []
     for legalNote in legalNoteNamesSoprano:
         note1 = note.Note(legalNote)
@@ -29,7 +29,7 @@ if __name__ == '__main__':
     if canon_type == 'l5':
         intervalNames = ['m-3','M-3','P-5','P1','m2','M2','P4']
     if canon_type == 'l4':
-        intervalNames = ['m2','M2','P4','m6','m-2','M-2','m-3','M-3','P5']
+        intervalNames = ['m-2','M-2','P-4','m2','M2','m3','M3','P5']
     intervals = []
     for intervalName in intervalNames:
         intervals.append(interval.Interval(intervalName))
