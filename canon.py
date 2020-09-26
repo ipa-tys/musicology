@@ -4,9 +4,20 @@ import random
 import pdb
 import sys
 import argparse
+import textwrap
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description='generate canon antecedents.')
+
+    parser = argparse.ArgumentParser(description='generate canon antecedents.',
+        prog='canon.py',
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog=textwrap.dedent('''
+            Examples:
+            1.) Canon in the lower fourth:
+            python canon.py -o canon01 -t l4
+
+        ''')
+    )
     parser.add_argument('-o','--output',help='File stem for output files',required=True)
     parser.add_argument('-t','--type', help='Type of canon', required=True)
     # todo: add difficulty levels (e.g. only a subset of steps, etc)
