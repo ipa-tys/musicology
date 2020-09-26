@@ -26,6 +26,13 @@ if __name__ == '__main__':
     filestem = args.output
     canon_type = args.type
 
+    # todo: ficta notes B, Eb, and F-sharp are allowed
+    # after creating a new note, check that it has no melodic tritone and that the two lines are consonant
+    # check_comes_melodically(note1)
+    # check_canon_harmonically(note1)
+    # otherwise try ficta in comes and/or in dux
+    
+
     legalNoteNamesTenor = ['B-2','B2','C3','D3','E3','F3','G3','A3','B-3','B3','C4','D4','E4','F4','G4','A4']
     legalNoteNamesSoprano = ['B-3','B3','C4','D4','E4','F4','G4','A4','B-4','B4','C5','D5'] # 'E5','F5','G5','A5']
     legalNotes = []
