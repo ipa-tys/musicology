@@ -18,14 +18,15 @@ if __name__ == '__main__':
 
         ''')
     )
-    parser.add_argument('-o','--output',help='File stem for output files',required=True)
     parser.add_argument('-t','--type', help='Type of canon', required=True)
+    parser.add_argument('-o','--output',help='File stem for output files',required=True)
+    parser.add_argument('--pdf', help='Generate sheet music PDF', action='store_true')
     # todo: add difficulty levels (e.g. only a subset of steps, etc)
     # let choose the soundfont
     args = parser.parse_args()
     filestem = args.output
     canon_type = args.type
-
+    pdf_output = args.pdf
     # todo: ficta notes B, Eb, and F-sharp are allowed
     # after creating a new note, check that it has no melodic tritone and that the two lines are consonant
     # check_comes_melodically(note1)
@@ -75,7 +76,9 @@ if __name__ == '__main__':
 
 
     fp = stream1.write('midi', fp=filestem + '.mid')
-    stream1.show()
+
+    if args.pdf:
+        stream1.show()
     # stream1.show(filestem + '.pdf')
 
     my_tempo = tempo.MetronomeMark(number=40)
